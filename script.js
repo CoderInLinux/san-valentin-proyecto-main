@@ -10,3 +10,11 @@ function moverAleatoriamente(btn) {
 btnNo.addEventListener("mouseenter", function (e) {
     moverAleatoriamente(e.target)
 })
+
+document.addEventListener('click', function () {
+    let audio = document.getElementById('miAudio');
+    if (audio.paused) {
+        audio.play();
+    }
+}, { once: true });
+
