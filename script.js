@@ -18,3 +18,10 @@ document.addEventListener('click', function () {
     }
 }, { once: true });
 
+window.onload = function () {
+    setTimeout(() => {
+        let audio = document.getElementById("miAudio");
+        if (audio) audio.play().catch(error => console.log("Autoplay bloqueado:", error));
+    }, 2000);
+};
+
